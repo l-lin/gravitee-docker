@@ -1,3 +1,17 @@
+= NOTES
+
+This fork is used to integrate the fix the following issue: https://github.com/gravitee-io/issues/issues/2672
+
+Only the Docker image `graviteeio/management-ui` has been built and published in our internal Docker registry.
+
+```bash
+git clone https://github.com/l-lin/gravitee-docker
+cd gravitee-docker/images/management-ui
+docker build --build-arg GRAVITEEIO_VERSION=1.29.0-oodrive -t graviteeio/management-ui:1.29.0-oodrive .
+docker tag graviteeio/management-ui:1.29.0-oodrive registry.oodrive.net/graviteeio/management-ui:1.29.0-oodrive
+docker push registry.oodrive.net/graviteeio/management-ui:1.29.0-oodrive
+```
+
 = Gravitee Dockerfiles
 
 ifdef::env-github[]

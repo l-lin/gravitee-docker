@@ -23,7 +23,7 @@ RUN apk --update add zip unzip bash wget
 
 ENV WWW_TARGET /var/www/html/
 
-RUN wget https://download.gravitee.io/graviteeio-apim/components/gravitee-management-webui/gravitee-management-webui-${GRAVITEEIO_VERSION}.zip --no-check-certificate -P /tmp/ \
+RUN wget https://github.com/l-lin/gravitee-management-webui/releases/download/${GRAVITEEIO_VERSION}/gravitee-management-webui-${GRAVITEEIO_VERSION}.zip --no-check-certificate -P /tmp/ \
     && unzip /tmp/gravitee-management-webui-${GRAVITEEIO_VERSION}.zip -d /tmp/ \
     && mkdir -p ${WWW_TARGET} \
     && mv /tmp/gravitee-management-webui-${GRAVITEEIO_VERSION}/* ${WWW_TARGET} \

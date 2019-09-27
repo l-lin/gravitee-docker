@@ -52,7 +52,7 @@ services:
 
   managementui:
     hostname: demo-managementui
-    image: graviteeio/management-ui:latest
+    image: graviteeio/management-ui:1.29.0-oodrive
 
   managementapi:
     hostname: demo-managementapi
